@@ -1,0 +1,9 @@
+<app-navbar></app-navbar>
+<ol class="collection">
+  <app-todo-item
+  *ngFor="let todo of todos"
+  [todo]="todo"
+  (addTodo)="addTodo($event)"
+  ></app-todo-item>
+</ol>
+<app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
